@@ -27,7 +27,7 @@ class Child(Parent):
         super().show_property()
         print("Child has: ", self.car)
 
-c1 = Child("10 bigha", "a mansion", "a BMW")
+c1 = Child("5 bigha", "two apartments", "a new car")
 
 land = input("Enter how much land your grandfather has: ")
 house = input("Enter what house your parent has: ")
