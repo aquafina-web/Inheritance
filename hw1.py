@@ -20,7 +20,7 @@ class Person:
 class Student(Person):  
     # Student_id = ''
     def display(self):
-        print(f"hello, i am a child class")
+        print(f"this is a child class")
 
 s1 = Student('mim', 12)
 s1.display()
