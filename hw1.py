@@ -22,6 +22,6 @@ class Student(Person):
     def display(self):
         print(f"hello, i am a child class")
 
-# s1 = Student('mim', 12)
-# s1.display()
-# s1.show_person_info()
+s1 = Student('mim', 12)
+s1.display()
+s1.show_person_info()
