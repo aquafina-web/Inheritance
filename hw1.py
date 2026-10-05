@@ -1,27 +1,38 @@
-#single inheritance
-#problem 1
-#parent class
-class Person:
-    name = ''
-    age = ''
+#multilevel inheritance
 
-    def __init__(self, n, a):
-        self.name = n
-        self.age = a
+class Grandfather:
+    land = ''
 
-    def show_person_info(self):
-        print(f"name: {self.name}")
-        print(f"age: {self.age}")
+    def __init__(self,l):
+        self.land = l
 
-# p1 = Person('momo', 123)
-# p1.show_person_info()
+    def show_property(self):
+        print("Grandfather has: ", self.land)
 
-#child class
-class Student(Person):  
-    # Student_id = ''
-    def display(self):
-        print(f"this is a child class")
+class Parent(Grandfather):
+    def __init__(self, l, h):
+        super().__init__(l)
+        self.house = h
 
-s1 = Student('mim', 12)
-s1.display()
-s1.show_person_info()
+    def show_property(self):
+        super().show_property()
+        print("Parent has: ", self.house)
+
+class Child(Parent):
+    def __init__(self, l, h, c):
+        super().__init__(l, h)
+        self.car = c
+    
+    def show_property(self):
+        super().show_property()
+        print("Child has: ", self.car)
+
+c1 = Child("10 bigha", "a mansion", "a BMW")
+
+land = input("Enter how much land your grandfather has: ")
+house = input("Enter what house your parent has: ")
+car = input("Enter what car you have: ")
+c1 = Child(land, house, car)
+
+print()
+c1.show_property()
